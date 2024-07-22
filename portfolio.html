@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Vasudha Chigurupati - Data Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #ffcc00 3px solid;
+            animation: fadeInDown 1s ease-out;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-out;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .section {
+            padding: 20px 0;
+            overflow: hidden;
+            animation: slideIn 1s ease-out;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .box {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .box img {
+            width: 90px;
+            height: 90px;
+            transition: transform 0.3s;
+        }
+        .box img:hover {
+            transform: scale(1.1);
+        }
+        .box .github-link {
+            display: block;
+            margin-top: 10px;
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .box .github-link:hover {
+            color: #fff;
+        }
+        .footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+        .achievements, .certifications, .experience-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+       /* General styles for achievements, certifications, and experience items */
+.achievement, .certification, .experience-item {
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Specific styles for achievements */
+.achievement {
+    width: 60%; /* Adjust the width for achievements */
+}
+
+/* Specific styles for achievements text */
+.achievement p {
+    font-size: 1em; /* Ensure the text size is consistent */
+    margin: 0;
+}
+
+/* Keep existing styles for certifications and experience items */
+.certification, .experience-item {
+    width: 30%; /* Width for certifications and experience items */
+}
+
+.certification p, .experience-item p {
+    font-size: 1em; /* Text size for certifications and experience items */
+    margin: 0;
+}
+        }
+        .achievement {
+            text-align: center;
+            font-size: 1em; /* Increase font size for achievements */
+        }
+        .certification-link {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .certification-link:hover {
+            color: #fff;
+        }
+        .experience-link {
+            color: #ffcc00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .experience-link:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            header nav, header #branding {
+                float: none;
+                text-align: center;
+            }
+            header nav ul {
+                text-align: center;
+            }
+            header nav ul li {
+                display: block;
+                padding: 10px;
+            }
+            .box, .achievement, .certification, .experience-item {
+                width: 100%;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Sai Vasudha Chigurupati</h1>
+                <p>College Graduate | Data Engineer</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#event-coordination">Event Coordination</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my projects, experience, and skills in Data Engineering</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>As an aspiring Data Engineer with a solid foundation in Python, SQL, Power BI, and advanced data analytics, I thrive on transforming complex data into actionable insights. My journey began with a passion for understanding patterns and leveraging data to solve real-world problems, which has led me to develop expertise in Machine Learning, Deep Learning, and Natural Language Processing (NLP).</p>
+    <p>In my career so far, I have spearheaded several data-driven projects that involved integrating and analyzing diverse datasets to provide meaningful business insights. Currently, I am working on a text summarization project, where I apply cutting-edge NLP techniques to extract and condense key information from extensive text sources.</p>
+    <p>I actively keep up with market trends and technological advancements, ensuring that my skills and knowledge remain at the forefront of the industry. My commitment to continuous learning and staying updated with the latest developments allows me to approach problems with innovative solutions and adapt to evolving technologies effectively.</p>
+    <p>Outside of my technical skills, I bring a creative mindset, strong problem-solving abilities, and a passion for leveraging data to drive decisions. I am always eager to explore new opportunities and challenges that align with my interests in data engineering and analytics.</p>
+</section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="box">
+                <h3>Revenue Insights of Hotel</h3>
+                <p>Developed a comprehensive Power BI dashboard for hospitality analytics showcasing key performance indicators such as RevPAR, Revenue, Total Bookings, Occupancy, and ADR.</p>
+                <p>Tech Stack: Power BI, SQL</p>
+                <a class="github-link" href="https://github.com/vasudhachigurupati/Revenue_Insights_of_hotel.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="box">
+                <h3>Pizza Sales</h3>
+                <p>The Power BI dashboard includes insights such as Daily Trends for Total Orders, Monthly Trends for Total Orders, Percentage of Sales by Pizza Category, Percentage of Sales by Pizza Size, Total Pizzas Sold by Pizza Category, Top 5 Best Sales by Revenue, and Bottom 5 Pizzas Sales by Revenue.</p>
+                <p>Tech Stack: Power BI, SQL,Excel</p>
+                <a class="github-link" href="https://github.com/vasudhachigurupati/power_bi_pizza_sales_With_sql.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="box">
+                <h3>Call Center Solution</h3>
+                <p>Developed a solution to improve call center operations, focusing on enhancing customer service efficiency and response time.</p>
+                <p>Tech Stack: Power BI, SQL</p>
+                <a class="github-link" href="https://github.com/vasudhachigurupati/power_bi_call_center_solution.git" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="experience-box">
+                <div class="experience-item">
+                    <h3>Infyskills Internship</h3>
+                    <p>Worked on a quiz app project, handling backend development using React, MongoDB, and Express.</p>
+                    <a class="experience-link" href="https://drive.google.com/file/d/1EzPkUtYiCpgebXoIvBm-tUqK6d4YwuVX/view?usp=sharing" target="_blank">View Internship Completion Certificate</a>
+                </div>
+                <div class="experience-item">
+                    <h3>Text Summarization Project</h3>
+                    <p>Ongoing project focused on summarizing text using Jupyter Notebook, Hugging Face, and various NLP techniques.</p>
+                    <a class="experience-link" href="https://github.com/vasudhachigurupati/Text-Summarization.git" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+    <h2>Skills</h2>
+    <p><strong>Programming Languages:</strong> Python, Java</p>
+    <p><strong>Machine Learning & AI:</strong> Neural Networks, Deep Learning, Statistical Analysis</p>
+    <p><strong>Database & Data Visualization:</strong> SQL, Power BI, Jupyter Notebook</p>
+    <p><strong>Spreadsheet & Analysis:</strong> Excel</p>
+    <p><strong>Version Control:</strong> Git, GitHub</p>
+    <p><strong>Data Structures and Algorithms</strong></p>
+    <p><strong>Data Science & Analytics</strong></p>
+    <p><strong>Natural Language Processing</strong></p>
+    <p><strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Time Management, Adaptability</p>
+</section>
+
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <div class="certifications">
+                <div class="certification">
+                    <h3>NPTEL - Python for Data Science</h3>
+		   <p>score: 76% </p>
+
+                    <a class="certification-link" href="https://drive.google.com/file/d/1HiengF0jM2N9PLVaiXR9xPjv5W08X2fY/view?usp=sharing" target="_blank">View Certificate</a>
+                </div>
+                <div class="certification">
+                    <h3>IBM Data Science Professional Certificate</h3>
+                    <a class="certification-link" href="https://drive.google.com/file/d/16Qdf6ofIaYDfDb2k6vxT9nOUXMpPX2H-/view?usp=sharing" target="_blank">View Certificate</a>
+                </div>
+                <div class="certification">
+                    <h3>PwC Power BI Virtual Case Experience via Forage</h3>
+                    <a class="certification-link" href="https://drive.google.com/file/d/1sEm8hgBbsECHSGUS7amsCFV7EsU7K6zf/view?usp=sharing" target="_blank">View Certificate</a>
+                </div>
+                <div class="certification">
+                    <h3>Standard Bank Data Science Virtual Case Experience via Forage</h3>
+                    <a class="certification-link" href="https://drive.google.com/file/d/1co2v33ZrNOgYsH32xh_1aGvigPW8nWAF/view?usp=sharing" target="_blank">View Certificate</a>
+                </div>
+                <div class="certification">
+                    <h3>Introduction to Data Science and Machine Learning with Python by Udemy</h3>
+                    <a class="certification-link" href="https://drive.google.com/file/d/1RUfCEpkPxZN-66lc8c19UO9I7YbQOToP/view?usp=sharing" target="_blank">View Certificate</a>
+                </div>
+                <div class="certification">
+                    <h3>Microsoft Excel course by Udemy</h3>
+                    <a class="certification-link" href="https://drive.google.com/file/d/1HYyzSFrB1riggqiz4FZ0XEn7IssKILF_/view?usp=sharing" target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <h2>4th Prize in 'Avishakaar' State-Level Student Innovation Competition</h2>
+                    <p>"HIRE HANDS" is an innovative platform connecting local skilled contract workers with potential hirers across diverse categories like chefs, architects, carpenters, and more. Its location-based matching system simplifies finding nearby talent, while offering both individual and team profiles. The user-friendly interface streamlines the hiring process for specific projects or tasks. By addressing the challenge of locating skilled local contractors, HIRE HANDS aims to revolutionize the gig economy. This idea secured 4th place in a recent entrepreneurship competition, highlighting its potential to transform how local communities connect for professional services. HIRE HANDS stands out with its versatile, location-specific approach to contract work across multiple industries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>Bachelor's Degree:</strong> [Your Degree] - [Your University]</p>
+            <p><strong>Intermediate:</strong> [Your Intermediate Course] - [Your Institution]</p>
+            <p><strong>10th Grade:</strong> [Your 10th Grade Details] - [Your School]</p>
+        </section>
+
+        <section id="event-coordination" class="section">
+            <h2>Event Coordination</h2>
+            <div class="event-coordination">
+                <h3>Spardha - ACM Tech Fest</h3>
+                <p>Coordinated a series of tech-oriented events during the ACM Tech Fest, where I played a key role in organizing workshops and seminars. This experience highlighted my ability to manage multiple tasks efficiently while ensuring smooth operations. My efforts in liaising with speakers and participants showcased my strong organizational skills and effective communication.</p>
+                <h3>Department-Level Hackathon</h3>
+                <p>Oversaw the logistical aspects of the department-level hackathon. My role involved facilitating team interactions and problem-solving, which helped foster a collaborative environment. This experience honed my skills in event management and team leadership.</p>
+                <h3>Balostav </h3>
+                <p>Participated in the Baloctav event for children, where I was responsible for engaging with young participants and coordinating activities with volunteers. My involvement required creativity and enthusiasm to maintain a fun and educational atmosphere, demonstrating my ability to connect with children and manage group dynamics effectively.
+
+</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Phone: 8897445549</p>
+            <p>Email: <a href="mailto:vasudha.chigurupatii@gmail.com">Mail</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-vasudha-chigurupati-3bbb4a22b/" target="_blank">Connect with me on LinkedIn</a></p>
+        </section>
+
+        <section class="resume">
+            <h2>Download My Resume</h2>
+            <a href="[Your Google Drive Resume Link]" target="_blank">Download Resume</a>
+        </section>
+    </div>
+
+    </body>
+</html>
